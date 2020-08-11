@@ -4,9 +4,6 @@ os:
     - osx
 env:
     - BUILD_PY=2.7
-    - BUILD_PY=3.6
-    - BUILD_PY=3.7
-    - BUILD_PY=3.8
 before_install:
     - MINICONDA_VERSION=latest
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then MINICONDA_OS=Linux; else MINICONDA_OS=MacOSX; fi
@@ -21,7 +18,7 @@ before_install:
     - conda config --add channels demorest
     - conda info -a
     - export LANG=en_US.UTF-8
-    - BLDCMD="conda build --python $BUILD_PY --numpy 1.14 ./recipe"
+    - BLDCMD="conda build --python $BUILD_PY ./recipe"
 install:
     - git clone https://github.com/pennucci/PulsePortraiture.git PulsePortraiture
 script:
