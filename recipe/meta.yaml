@@ -1,0 +1,33 @@
+package:
+    name: pulseportraiture
+    version: {{ GIT_DESCRIBE_TAG }}
+
+build:
+    number: {{ GIT_DESCRIBE_NUMBER }}
+
+source:
+    path: ../PulsePortraiture
+
+requirements:
+    build:
+        - python
+        - setuptools
+    run:
+        - python
+        - numpy
+        - scipy
+        - psrchive
+        - matplotlib
+        - lmfit
+        - pywavelets
+
+test:
+    imports:
+        - pplib
+        - pptoaslib
+    commands:
+        - pptoas.py -h
+
+about:
+    home: https://github.com/pennucci/PulsePortraiture
+
