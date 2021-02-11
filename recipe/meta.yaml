@@ -6,7 +6,8 @@ build:
     number: {{ GIT_DESCRIBE_NUMBER }}
 
 source:
-    path: ../PulsePortraiture
+    git_url: https://github.com/pennucci/PulsePortraiture.git
+    git_tag: py3 # [py3k] 
 
 requirements:
     build:
