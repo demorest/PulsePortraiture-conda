@@ -15,8 +15,8 @@ before_install:
     - hash -r 
     - conda config --set always_yes yes --set changeps1 no
     - conda install conda-build
-    - conda config --add channels conda-forge
     - conda config --add channels demorest
+    - conda config --add channels conda-forge
     - conda info -a
     - export LANG=en_US.UTF-8
     - BLDCMD="conda build --python $BUILD_PY ./recipe"
